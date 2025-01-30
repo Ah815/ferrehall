@@ -190,7 +190,7 @@ const HeroSection = () => {
                       : "Immerse yourself in a world of artistic splendor, where masterpieces from bygone eras adorn walls of timeless elegance."}
                   </p>
                   <Link href={title === "The Grand Library" ? "/library" : "/gallery"}>
-                    <button className="vintage-button border-2 border-amber-900 py-3 px-6 text-amber-900 hover:bg-amber-900 hover:text-sepia-100 transition duration-300 uppercase tracking-wide">
+                    <button className="vintage-button border-2 border-amber-900 py-3 px-6 text-amber-900 hover:bg-black hover:text-white transition duration-300 uppercase tracking-wide">
                       {title === "The Grand Library" ? "Discover Literary Treasures" : "Unveil Artistic Wonders"}
                     </button>
                   </Link>
@@ -205,7 +205,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-16 text-sepia-800 relative">
           Featured Events
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-amber-700"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1"></span>
         </h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -236,7 +236,7 @@ const HeroSection = () => {
                   <h3 className="text-2xl font-semibold mb-2 text-sepia-800">{event.title}</h3>
                   <p className="text-sepia-700 mb-4">{event.description}</p>
                   <Link href="/events">
-                    <button className="text-amber-900 border-b-2 border-amber-900 pb-1 hover:text-amber-700 hover:border-amber-700 transition duration-300">
+                    <button className="text-amber-900 border-b-2 border-amber-900 pb-1 hhover:bg-black hover:text-white transition duration-300">
                       Learn More
                     </button>
                   </Link>

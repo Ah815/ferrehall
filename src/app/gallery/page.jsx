@@ -50,7 +50,7 @@ export default function AbstractGallery() {
     slidesToShow: 3, // Show multiple images at once
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     beforeChange: (_, newIndex) => setCurrentIndex(newIndex),
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -134,10 +134,10 @@ function NextArrow(props) {
   const { onClick } = props
   return (
     <div
-      className="absolute top-1/2 right-[-30px] transform -translate-y-1/2 bg-black/50 p-2 rounded-full cursor-pointer"
+      
       onClick={onClick}
     >
-      <ChevronRight className="text-white w-6 h-6" />
+      {/* <ChevronRight className="text-white w-6 h-6" /> */}
     </div>
   )
 }
@@ -146,10 +146,10 @@ function PrevArrow(props) {
   const { onClick } = props
   return (
     <div
-      className="absolute top-1/2 left-[-30px] transform -translate-y-1/2 bg-black/50 p-2 rounded-full cursor-pointer"
+      
       onClick={onClick}
     >
-      <ChevronLeft className="text-white w-6 h-6" />
+      {/* <ChevronLeft className="text-white w-6 h-6" /> */}
     </div>
   )
 }
