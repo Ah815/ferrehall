@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sepia-100: #f4e9d9;
+  --sepia-200: #e6d7c3;
+  --sepia-700: #8b4513;
+  --sepia-800: #6b3611;
+  --sepia-900: #2d2d2d;
+}
+
+/* body {
+  @apply bg-sepia-100 text-sepia-900;
+} */
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.decorative-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.decorative-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 3px;
+  background-image: linear-gradient(to right, transparent, var(--sepia-700), transparent);
+}
+
+.vintage-frame {
+  border: 4px double var(--sepia-700);
+  box-shadow: 0 0 0 4px var(--sepia-100), 0 0 0 8px var(--sepia-700);
+  position: relative;
+}
+
+.vintage-frame::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border: 1px solid var(--sepia-700);
+  z-index: -1;
+}
+/* 
+.vintage-card {
+  @apply overflow-hidden shadow-xl;
+  background-color: var(--sepia-100);
+  border: 1px solid var(--sepia-700);
+}
+
+.vintage-button {
+  @apply bg-sepia-800 text-sepia-100 py-2 px-4 transition duration-300 border border-sepia-200 shadow-md;
+  position: relative;
+  overflow: hidden;
+} */
+
+.vintage-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: all 0.6s;
+}
+
+.vintage-button:hover::before {
+  left: 100%;
+}
+
+/* .vintage-button:hover {
+  @apply bg-sepia-700;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+
